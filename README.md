@@ -1,45 +1,45 @@
 # WASM Tetris (Rust)
 
-Небольшое веб‑приложение с игрой «Тетрис». Вся логика написана на Rust и компилируется в WebAssembly. JavaScript используется только для загрузки WASM-модуля.
+A small web app with a Tetris game. All game logic is written in Rust and compiled to WebAssembly. JavaScript is only used to load the WASM module.
 
-## Требования
+## Requirements
 
 - Rust (stable)
 - `wasm-pack`
 - Node.js + npm
 
-Установка `wasm-pack`:
+Install `wasm-pack`:
 
 ```bash
 cargo install wasm-pack
 ```
 
-## Быстрый старт
+## Quick start
 
 ```bash
 npm install
 npm run start
 ```
 
-Откройте браузер: `http://localhost:3000`
+Open in your browser: `http://localhost:3000`
 
-## Управление
+## Controls
 
-- Влево/вправо: Arrow Left/Right
-- Мягкое падение: Arrow Down
-- Поворот: Arrow Up
-- Жесткое падение: Space
-- Перезапуск: R
+- Move left/right: Arrow Left/Right
+- Soft drop: Arrow Down
+- Rotate: Arrow Up
+- Hard drop: Space
+- Restart: R
 
-## Структура проекта
+## Project structure
 
-- `src/lib.rs` — игровая логика и отрисовка через `CanvasRenderingContext2d`
-- `index.html` — разметка страницы
-- `main.js` — минимальный загрузчик WASM
-- `style.css` — стили интерфейса
-- `pkg/` — артефакты `wasm-pack` (создается при сборке)
+- `src/lib.rs` - game logic and rendering via `CanvasRenderingContext2d`
+- `index.html` - page markup
+- `main.js` - minimal WASM loader
+- `style.css` - UI styles
+- `pkg/` - `wasm-pack` artifacts (generated on build)
 
-## Полезные команды
+## Useful commands
 
-- `npm run build` — сборка WASM в `pkg/`
-- `npm run start` — сборка и запуск локального сервера
+- `npm run build` - build WASM into `pkg/`
+- `npm run start` - build and start local server
