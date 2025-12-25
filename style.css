@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #0b0d13;
+  --panel: #141826;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Fira Mono", monospace;
+  background: radial-gradient(circle at top, #1f2937 0%, #0b0d13 55%, #050608 100%);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(220px, 320px) auto;
+  padding: 32px;
+}
+
+.panel h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #1f2937;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+}
+
+.note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stage {
+  background: linear-gradient(180deg, #1f2937 0%, #0f172a 100%);
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+canvas {
+  display: block;
+  border-radius: 12px;
+  background: #0f172a;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

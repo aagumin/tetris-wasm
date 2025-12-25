@@ -1,0 +1,13 @@
+{
+  "name": "tetris-wasm",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "wasm-pack build --target web",
+    "start": "npm run build && npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

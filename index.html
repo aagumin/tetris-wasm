@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris WASM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>WASM Tetris</h1>
+        <p class="subtitle">Rust + wasm-bindgen demo</p>
+        <div class="card">
+          <p><strong>Controls</strong></p>
+          <p>Move: Arrow Left/Right</p>
+          <p>Soft drop: Arrow Down</p>
+          <p>Rotate: Arrow Up</p>
+          <p>Hard drop: Space</p>
+          <p>Restart: R</p>
+        </div>
+        <p class="note">All game logic runs in WASM. JavaScript only bootstraps the module.</p>
+      </section>
+      <section class="stage">
+        <canvas id="game" width="320" height="640"></canvas>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
